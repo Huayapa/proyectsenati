@@ -1,0 +1,72 @@
+.main-register {
+  min-height: 90vh;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-main {
+  max-width: 25rem;
+  height: 40rem;
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  & article {
+    width: 100%;
+  }
+  & h1 {
+    font-size: 2rem;
+    margin:0 ;
+  }
+  & article:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .line {
+      width: calc( 6rem + 4rem);
+      background-color: #75E94D;
+      height: 0.3rem;
+    }
+  }
+  & article:nth-child(2) {
+    margin: 3rem 0;
+    width: 20rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & label {
+      padding-top: 0.5rem;
+    }
+    & input:not(input[type="submit"]) {
+      max-width: 20rem;
+      padding: 0.7rem;
+      border: 0;
+      border-bottom: 3px solid #75E94D;
+    }
+    & a {
+      text-align: end;
+      padding: 1rem 0;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.4s ease;
+      &:hover {
+        text-decoration: underline;
+        color: #30701A;
+      }
+    }
+    & input[type="submit"] {
+      padding: 1rem;
+      background-color: #75E94D;
+      border-radius: 1rem;
+      color: white;
+      border: 0;
+      margin: 2rem 0;
+    }
+  }
+}
