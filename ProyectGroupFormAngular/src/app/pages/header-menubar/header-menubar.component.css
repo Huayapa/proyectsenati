@@ -15,6 +15,10 @@
     text-align: center;
   }
 }
+.menu-bar__logo {
+  text-decoration: none;
+  color: white;
+}
 .nav-logout ul {
   display: flex;
   list-style: none;
@@ -23,16 +27,18 @@
   gap: 1rem;
   margin: 1rem;
   padding: 0;
-  & button {
+  & a {
     padding: 0.6rem;
     background-color: inherit;
     border: 2px solid #9EEF81;
     border-radius: 10px;
     color: #ffffff;
     transition: all 0.5s ease;
+    text-decoration: none;
     &:hover {
       background-color: #9EEF81;
       color: #30701A;
+      text-decoration: underline;
     }
   }
 }

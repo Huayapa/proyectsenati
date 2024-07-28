@@ -1,9 +1,11 @@
 <header class="menu-bar">
-  <h2>Soy un logo</h2>
+  <a routerLink="/home" class="menu-bar__logo">
+    <h2>Soy un logo</h2>
+  </a>
   <nav class="nav-logout">
     <ul>
-      <li><button class="nav-logout__btn-login">Inicia Sesión</button></li>
-      <li><button class="nav-logout__btn-register">Registrate aqui</button></li>
+      <li><a routerLink="/login" class="nav-logout__a-login">Inicia Sesión</a></li>
+      <li><a routerLink="/register" class="nav-logout__a-register">Registrate aqui</a></li>
     </ul>
   </nav>
 </header>
