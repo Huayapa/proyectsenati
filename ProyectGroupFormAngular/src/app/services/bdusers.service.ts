@@ -14,7 +14,7 @@ export class BdusersService {
   }
 
   getUsers() {
-    return this.http.get("https://api.escuelajs.co/api/v1/products");
+    return this.http.get("http://localhost/proyectsenati/ProyectGroupFormAngular/src/database/peticiontable.php");
   }
 
 }
