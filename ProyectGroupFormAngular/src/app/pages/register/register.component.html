@@ -1,20 +1,20 @@
 <main class="main-register">
   <section>
-    <form method="post" class="form-main">
+    <form class="form-main" [formGroup]="formGroup">
       <article>
         <h1>Registrate</h1>
         <div class="line"></div>
       </article>
-      <article>
+      <article >
         <label for="name">Nombre</label>
-        <input type="text" name="nombre" id="nombre">
+        <input type="text" name="nombre" id="nombre" required formControlName="name">
         <label for="apellido">Apellido</label>
-        <input type="text" name="apellido" id="apellido">
+        <input type="text" name="apellido" id="apellido" required formControlName="lastname">
         <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo" required>
+        <input type="email" id="correo" name="correo" required formControlName="email">
         <label for="contra">Contraseña</label>
-        <input type="password" id="contra" name="contra" required>
-        <input type="submit" value="Login">
+        <input type="password" id="contra" name="contra" required formControlName="password">
+        <input type="submit" value="Registrarse" (click)="clickRegist()">
       </article>
     </form>
   </section>

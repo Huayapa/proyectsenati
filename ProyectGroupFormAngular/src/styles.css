@@ -7,8 +7,10 @@
 
 html {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
 }
+
