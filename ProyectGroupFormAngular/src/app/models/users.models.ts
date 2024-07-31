@@ -1,3 +1,4 @@
+//Modelo de datos cuando solicitemos la base de datos
 export interface Iuser {
   userid:string,
   username:string,

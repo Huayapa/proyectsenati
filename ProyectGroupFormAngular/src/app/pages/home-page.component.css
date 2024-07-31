@@ -1,0 +1,15 @@
+h2 {
+  text-align: center;
+}
+
+.main {
+  text-align: center;
+  & .section {
+    max-width: 30rem;
+    margin: 0 auto;
+    border: 2px solid #30701A;
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: #9EEF81;
+  }
+}

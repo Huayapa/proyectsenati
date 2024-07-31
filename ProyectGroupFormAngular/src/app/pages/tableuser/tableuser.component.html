@@ -1,1 +1,40 @@
-<p>tableuser works!</p>
+<!--Creacion de una tabla de usuarios que comprueba la existencia de datos en "listUser" y creando filas para cada usuario-->
+
+<div class="content-tabla">
+  <table border="1px" class="box-white">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>correo</th>
+        <th>Fecha de creación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- "@if(listUser)" Comprueba si listUser tiene datos-->
+      @if(listUser) {
+        <!--Bucle donde item representa cada elemento de listUser y $index es el índice del bucle-->
+        @for (item of listUser; track $index) {
+          <tr>
+            <td>{{item.userid}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.userlastname}}</td>
+            <td>{{item.useremail}}</td>
+            <td>{{item.userdate}}</td>
+          </tr>
+          <!-- En caso de que el bucle  este vacion ejecutara esto -->
+        } @empty { 
+          <tr>
+            <td colspan="5" style="text-align: center;">No hay una conexion a la base de datos</td>
+          </tr>
+        }
+      } @else {
+        <tr>
+          <td colspan="5" style="text-align: center;">No hay una conexion a la base de datos</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  
+</div>

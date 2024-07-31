@@ -1,6 +1,6 @@
 <main class="main-register">
-  <section>
-    <form class="form-main" [formGroup]="formGroup">
+  <section >
+    <form class="form-main" [formGroup]="formGroupRegister">
       <article>
         <h1>Registrate</h1>
         <div class="line"></div>
@@ -18,11 +18,19 @@
       </article>
     </form>
   </section>
-  <!-- @if(ListUser) {
-    @for (item of ListUser; track $index) {
-      @for (user of item; track $index) {
-        <p>{{user.id}}</p>
-      }
+  <!-- mostrar por el DOM si se registro -->
+  @switch (IsRegist) {
+    @case ("Register") {
+      <section class="section-register">
+        <button (click)="btnClose()">X</button>
+        <p>Registado correctamente</p>
+      </section>
     }
-  } -->
+    @case ("errorRegister") {
+      <section class="section-noregister">
+        <button (click)="btnClose()">X</button>
+        <p>No se pudo registrar</p>
+      </section>
+    }
+  }
 </main>

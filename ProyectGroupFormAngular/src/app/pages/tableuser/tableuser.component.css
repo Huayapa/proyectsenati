@@ -1,0 +1,39 @@
+
+.content-tabla{
+  min-height: 95vh;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-white{
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 70%;
+
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid ;
+  /*
+  border: 2px solid green;
+  overflow: hidden; */ 
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 2px solid green ;
+  
+}
+
+th {
+  background-color: #e1f8e3;
+}
+
+td {
+  word-wrap: break-word;
+}

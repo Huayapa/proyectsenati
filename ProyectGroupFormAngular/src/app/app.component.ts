@@ -8,7 +8,7 @@ import { TableuserComponent } from './pages/tableuser/tableuser.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomePageComponent, HeaderMenubarComponent, RouterLink, TableuserComponent],
+  imports: [RouterOutlet, HomePageComponent, HeaderMenubarComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

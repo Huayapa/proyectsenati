@@ -2,10 +2,10 @@
   min-height: 90vh;
   background-color: #f2f2f2;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .form-main {
   max-width: 25rem;
   height: 40rem;
@@ -69,4 +69,35 @@
       margin: 2rem 0;
     }
   }
+}
+.section-register, .section-noregister {
+  padding: 1rem;
+  margin: 1rem;
+  position: absolute;
+  & button {
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    transition: all 0.4s ease;
+    &:hover {
+      background-color: #4e0303;
+      color: white;
+    }
+  }
+}
+
+.section-register {
+ background-color: #75E94D;
+ border: 2px solid #30701A;
+ border-radius: 10px;
+}
+
+.section-noregister {
+ background-color: #cf4242;
+ border: 2px solid #4e0303;
+ border-radius: 10px;
 }

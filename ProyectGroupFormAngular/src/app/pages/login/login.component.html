@@ -1,17 +1,17 @@
 <main class="main-login">
   <section>
-    <form method="post" class="form-main">
+    <form method="post" class="form-main" [formGroup]="formGroupLogin">
       <article>
         <h1>Login</h1>
         <div class="line"></div>
       </article>
       <article>
         <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo" required>
+        <input type="email" id="correo" name="correo" required formControlName="email">
         <label for="contra">Contraseña</label>
-        <input type="password" id="contra" name="contra" required>
+        <input type="password" id="contra" name="contra" required formControlName="password">
         <a href="#">Olvido la contraseña?</a>
-        <input type="submit" value="Login" >
+        <input type="submit" value="Login" (click)="toSuccess()">
       </article>
     </form>
   </section>
