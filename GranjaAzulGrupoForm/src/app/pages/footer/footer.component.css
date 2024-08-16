@@ -1,0 +1,39 @@
+footer {
+  background-color: rgb(0, 51, 108);
+  width: 100%;
+  padding: 1rem;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.line {
+  width: 98%;
+  height: 0.1rem;
+  margin: 0 auto;
+  background-color: white;
+}
+.footer-locate div {
+  margin: 1rem ;
+  padding: 0 4rem;
+  color: white;
+}
+
+.footer-rutas ul {
+  padding: 0;
+  & li {
+    list-style: none;
+    padding: 0.1rem 0;
+    & a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        background-color: #00000050;
+      }
+    }
+  }
+}
