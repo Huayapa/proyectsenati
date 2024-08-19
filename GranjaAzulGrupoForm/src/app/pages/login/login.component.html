@@ -1,0 +1,60 @@
+<body>
+  <div class="formContainer">
+      <form class="loginForm" [formGroup]="formUser" (ngSubmit)="verficiarLoginUser()">
+          <div>
+              <h1>¡Bienvenido de nuevo!</h1>
+              <h2>Inicia sesión para continuar</h2>
+              <hr>
+          </div>
+          <div>
+              <label class="campoLabel" for="usuario">Nombre de usuario:</label>
+              <input class="campoTexto" type="text" formControlName="usuario" name="usuario">
+          </div>
+          <div>
+              <label class="campoLabel" for="password">Contraseña:</label>
+              <input class="campoTexto" type="password" formControlName="password" name="password">
+          </div>
+          <span class="checkbox-container">
+              <input type="checkbox" id="rememberMe">
+              <label for="rememberMe">Recordar contraseña</label>
+          </span>
+          <div>
+              <span>¿Olvidaste tu contraseña? <a class="linkgoRegister" routerLink="/recover">Recuperar contraseña</a></span>
+          </div>
+          <div>
+          <!--  -->
+              <input class="loginButton" type="submit" value="Acceder">
+          </div>
+          <div class="loginContainer">
+              <span>¿No tienes una cuenta? <a class="linkgoRegister" routerLink="/register">Registrate aquí</a></span>
+          </div>
+
+      </form>
+  </div>
+<!-- Si es formulario es correcto enviara una modal -->
+@if(isLogin) {
+  <!-- Modal -->
+  <div class="modal">
+    <div class="modal-content">
+        <h2>Logueado</h2>
+        <button (click)="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+} @else if(isLogin == false ) {
+  <!-- Modal -->
+  <div class="modal">
+    <div class="modal-content">
+        <h2>Error al registrar</h2>
+        <p>Te quedan {{intentLogin}} intentos</p>
+        @if(intentLogin >= 1) {
+          <button (click)="cerrarModal()">Cerrar</button>
+        }
+        @if(intentLogin == 0) {
+          <p>Ya no tienen intentos disponibles</p>
+          <p>Debes esperar {{contLogin}}s</p>
+        }
+    </div>
+  </div>
+}
+</body>
+

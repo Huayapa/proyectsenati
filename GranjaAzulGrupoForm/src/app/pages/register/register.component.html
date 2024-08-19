@@ -1,0 +1,57 @@
+<body>
+  <div class="formContainer">
+    <form class="registerForm" [formGroup]="formRegist" (ngSubmit)="regist()">
+      <div>
+        <h1>¡Es un placer tenerte con nosotros!</h1>
+        <h2>Completa tu registro para empezar</h2>
+        <hr>
+      </div>
+      <div>
+        <label class="campoLabel" for="username">Nombre de usuario:</label>
+        <input class="campoTexto" type="text" id="username" formControlName="username">
+      </div>
+      <div>
+        <label class="campoLabel" for="password">Establece tu contraseña:</label>
+        <input class="campoTexto" type="password" id="password" formControlName="password">
+      </div>
+      <div>
+          <label class="campoLabel" for="dateNac">Fecha de nacimiento:</label>
+          <input class="campoTexto" type="date" id="dateNac" formControlName="dateNac">
+      </div>
+      <div>
+        <label class="campoLabel" for="genero">Selecciona tu genero:</label>
+        <select class="campoTexto" id="genero" formControlName="genero">
+          <option value="hombre">Hombre</option>
+          <option value="mujer">Mujer</option>
+        </select>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="accept">
+        <label for="accept">Acepto <a class="linkTerminos" href="#"> terminos y condiciones</a></label>
+      </div>
+      <div>
+        <input class="registerButton" type="submit" value="Completar registro">
+      </div>
+      <div>
+        <a class="linkgoLogin" routerLink="/login"><- Regresar</a>
+      </div>
+    </form>
+  </div>
+</body>
+@if(isregist) {
+  <!-- Modal -->
+  <div class="modal">
+    <div class="modal-content">
+        <h2>Registrado correctamente</h2>
+        <button (click)="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+} @else if(isregist == false) {
+  <!-- Modal -->
+  <div class="modal">
+    <div class="modal-content">
+        <h2>Error no se pudo registrar</h2>
+        <button (click)="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+}

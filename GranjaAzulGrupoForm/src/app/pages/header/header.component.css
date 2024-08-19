@@ -12,7 +12,7 @@
         justify-content: center;
         gap: 2rem;
         & button {
-            padding: 1rem;
+            padding: 0.5rem;
             width: 7rem;
             background-color: inherit;
             color: white;

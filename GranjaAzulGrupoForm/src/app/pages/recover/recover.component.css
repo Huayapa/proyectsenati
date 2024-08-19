@@ -1,0 +1,141 @@
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh; /* Altura a ajustar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formContainer {
+    min-width: 30em;
+    box-shadow: 5px 5px 20px rgb(0, 51, 108, 0.5);
+    padding: 2em 2em 2em 2em;
+    border-radius: 5px;
+}
+
+.recoverForm {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    color: #00336c;
+}
+
+.recoverForm h1 {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.recoverForm h2 {
+    font-weight: 200;
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
+}
+hr {
+    margin-top: 0.5em;
+    color: #00336c;
+    border: 1px solid #00336c;
+    margin-bottom: 0.6em;
+}
+
+.recoverForm>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.campoTexto {
+    background-color: rgb(0, 51, 108, 0.15);
+    padding: 0.75em 0.5em;
+    border-radius: 5px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    color: #00336c;
+    letter-spacing: 2px;
+}
+
+.campoLabel {
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 0.5em;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+select:focus {
+    outline: none;
+}
+
+.recoverButton {
+    margin-top: 1rem;
+    background-color: rgb(0, 51, 108 );
+    border: 1px solid #00336c;
+    padding: 0.75em 0.5em;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.linkgoLogin{
+    text-align: end;
+    padding: 1em 0em;
+    font-weight: 300;
+    color: #00336c;
+    text-decoration: none;
+}
+
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  max-width: 20rem;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal-content button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: rgb(0, 51, 108);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-content button:hover {
+  background-color: rgb(0, 51, 108, 0.8);
+}

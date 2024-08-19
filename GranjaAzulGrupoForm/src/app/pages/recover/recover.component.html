@@ -1,0 +1,57 @@
+<body>
+  <div class="formContainer">
+    <form class="recoverForm" [formGroup]="formRecover">
+        
+        <div>
+            <h1>¡Te ayudaremos a recuperar tu contraseña!</h1>
+            <h2>Completa los siguientes datos</h2>
+            <hr>
+        </div>
+  
+        <div>
+            <label class="campoLabel" for="username">Nombre de usuario:</label>
+            <input class="campoTexto" type="text" formControlName="usuario" id="username">
+        </div>
+  
+        <div>
+            <label class="campoLabel" for="dateNac">Fecha de nacimiento:</label>
+            <input class="campoTexto" type="date" formControlName="dateNac" id="dateNac">
+        </div>
+  
+        <div>
+            <label class="campoLabel" for="genero">Selecciona tu genero:</label>
+            <select class="campoTexto" formControlName="genero" id="genero">
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+            </select>
+        </div>
+  
+        <div>
+            <input class="recoverButton" type="submit" value="Comfirmar Datos" (click)="recoverPassword()"  id="openModal">
+        </div>
+  
+        <div>
+           <a class="linkgoLogin" routerLink="/login"><- Regresar</a>
+        </div>
+    </form>
+  </div>
+  @if(recoveredPassword) {
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal-content">
+          <h2>Tu contraseña es: </h2>
+          <p>"{{recoveredPassword}}"</p>
+          <button (click)="cerrarModal()">Cerrar</button>
+      </div>
+    </div>
+  } @else if(recoveredPassword === '') {
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal-content">
+          <h2>Error: No se pudo recuperar la contraseña</h2>
+          <p>Los datos ingresados no coinciden con ninguna cuenta</p>
+          <button (click)="cerrarModal()">Cerrar</button>
+      </div>
+    </div>
+  }
+</body>
