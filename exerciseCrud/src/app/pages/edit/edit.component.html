@@ -1,0 +1,29 @@
+<article class="w-full min-h-[50vh]">
+  <section class="max-w-[30rem] mx-auto p-3">
+      <h2 class="text-center text-4xl uppercase font-bold text-white">Editar</h2>
+  </section>
+  <form class="w-[45rem] mx-auto p-4 shadow-2xl shadow-slate-800 rounded-lg bg-slate-800" [formGroup]="editForm">
+      <div class="w-full my-5 text-white">
+          <label for="nombre" class="uppercase font-bold text-1xl block py-2">Nombres:</label>
+          <input type="text" class="w-full py-2 border-b-4 border-b-[#00c4cc] my-1 bg-[#ffffff13]"  formControlName="name">
+      </div>
+      <div class="w-full my-5 text-white">
+          <label for="apellidos" class="uppercase font-bold text-1xl block py-2">Apellidos:</label>
+          <input type="text" class="w-full py-2 border-b-4 border-b-[#00c4cc] my-1 bg-[#ffffff13]"  formControlName="apellidos">
+      </div>
+      <div class="w-full flex justify-center">
+          <button (click)="actualizar()" class="mx-auto w-[80%] my-2 border-2 border-slate-800 p-2 rounded-lg transition-all bg-[linear-gradient(90deg,_#00c4cc,_#6420ff,_#7d2ae7)] text-white hover:opacity-80">Guardar</button>
+      </div>
+  </form>
+</article>
+@if(isActiveModal) {
+    <dialog class="absolute top-0 left-0 z-40 w-full h-[100vh] flex justify-center items-center bg-slate-900/45">
+      <article class="w-[30rem] bg-[linear-gradient(90deg,_#00c4cc,_#6420ff,_#7d2ae7)] rounded-sm">
+          <section class="m-1 bg-slate-800 rounded-sm p-4 text-white text-center">
+              <h2 class="text-2xl uppercase my-4">Actualizado correctamente</h2>
+              <p>El usuario {{persona[0].name}} {{persona[0].apellidos}} fue editado</p>
+              <button (click)="cerrarModal()" class="py-2 px-4 m-2 rounded-md bg-[linear-gradient(90deg,_#00c4cc,_#6420ff,_#7d2ae7)] hover:opacity-40 transition-all">Cerrar</button>
+          </section>
+      </article>
+    </dialog>
+}

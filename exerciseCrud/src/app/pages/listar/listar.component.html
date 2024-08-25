@@ -1,0 +1,47 @@
+<article class="w-full relative">
+  <h2 class="text-center text-4xl uppercase font-bold text-white">Personas</h2>
+  <section class="mx-auto max-w-[50rem] shadow-sm overflow-hidden my-8">
+      <table class="border-collapse table-fixed w-full text-sm my-">
+          <thead class="bg-white dark:bg-slate-800 text-1xl font-bold">
+            <tr class="border-b-2 border-b-[#00c4cc]">
+                <th class="font-medium p-4 pl-8 pb-3 text-slate-400 dark:text-slate-200 text-left" >ID</th>
+                <th class="font-medium p-4 pl-8 pb-3 text-slate-400 dark:text-slate-200 text-left">NOMBRES</th>
+                <th class="font-medium p-4 pl-8 pb-3 text-slate-400 dark:text-slate-200 text-left">APELLIDOS</th>
+                <th class="font-medium p-4 text-center text-slate-400 dark:text-slate-200">ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody class="bg-slate-800 ">
+              @if (personas.length != 0) {
+                  @for (persona of personas; track $index) {
+                      <tr class="border-b-2 border-b-[#00c4cc]">
+                          <td class="p-2 pl-8 text-slate-500 dark:text-slate-400">{{persona.id}}</td>
+                          <td class="p-2 pl-8 text-slate-500 dark:text-slate-400">{{persona.name}}</td>
+                          <td class="p-2 pl-8 text-slate-500 dark:text-slate-400">{{persona.apellidos}}</td>
+                          <td class="p-2 pl-8 text-slate-500 dark:text-slate-400 flex justify-center gap-4">
+                              <button (click)="editar(persona)" class="m-2 p-2 w-[3rem] h-[3rem] bg-white rounded-lg  hover:bg-slate-900 hover:text-slate-800 transition flex justify-center items-center">
+                                <svg class="w-[1.7rem] fill-slate-900 hover:fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"/></svg>
+                            </button>
+                              <button (click)="delete(persona)" class="m-2 p-2 w-[3rem] h-[3rem] bg-white rounded-lg hover:*:fill-white hover:bg-slate-900 hover:text-slate-800 transition flex justify-center items-center" >
+                                <svg class="w-[1.7rem] fill-slate-900 hover:fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg>
+                            </button>
+                          </td>
+                      </tr>
+                  } 
+              }@else {
+                  <tr class="border-b-2 border-b-[#00c4cc]"><td colspan="4" class="p-2 text-center text-white"> No se encontro ningun dato el la base de datos</td></tr>
+              }
+          </tbody>
+      </table>
+  </section>
+</article>
+@if(isActiveModal) {
+    <dialog class="absolute top-0 left-0 z-40 w-full h-[100vh] flex justify-center items-center bg-slate-900/45">
+      <article class="w-[30rem] bg-[linear-gradient(90deg,_#00c4cc,_#6420ff,_#7d2ae7)] rounded-sm">
+          <section class="m-1 bg-slate-800 rounded-sm p-4 text-white text-center">
+              <h2 class="text-2xl uppercase my-4">Borrado exitosamente</h2>
+              <p>El usuario fue borrado de la lista</p>
+              <button (click)="cerrarModal()" class="py-2 px-4 m-2 rounded-md bg-[linear-gradient(90deg,_#00c4cc,_#6420ff,_#7d2ae7)] hover:opacity-40 transition-all">Cerrar</button>
+          </section>
+      </article>
+    </dialog>
+}
