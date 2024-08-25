@@ -7,7 +7,7 @@ Crear un modelo de datos para el usuario
 */
 export interface Iuser {
     username: string;
-    password: string;
+    password: string;   
     dateNac: Date;
     genero: Igenero;
 }

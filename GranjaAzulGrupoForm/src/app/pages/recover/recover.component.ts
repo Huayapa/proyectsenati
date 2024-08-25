@@ -34,17 +34,18 @@ export class RecoverComponent {
     const generoValue = this.formRecover.controls.genero.value;
     // Verificar que el valor de género sea válido ("hombre" o "mujer")
     if (generoValue === "hombre" || generoValue === "mujer") {
-      // Crear el objeto de datos de recuperación usando los valores del formulari8
+      // Crear el objeto de datos de recuperación usando los valores del formulario
       const recoverData: Irecover = {
         username: this.formRecover.controls.usuario.value,
         dateNac: new Date(this.formRecover.controls.dateNac.value),
         genero: generoValue
       };
       // Llamar al método recuperarUser del servicio UsersService con los datos de recuperación
-      // y almacenar la contraseña recuperada en recoveredPassword
+      // si todo coinicide - mostrar el valor de la contraseña
       this.recoveredPassword = this.Inyectusers.recuperarUser(recoverData);
     } 
   }
+  //cerrar modal
   cerrarModal() {
     this.recoveredPassword = null;
   }

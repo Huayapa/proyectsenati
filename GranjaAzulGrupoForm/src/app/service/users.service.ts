@@ -5,12 +5,14 @@ import { IloginUser, Irecover, Iuser } from '../models/modelsuser';
   providedIn: 'root'
 })
 export class UsersService {
-  /*Variable que alvergara los usuarios */
+  /*
+  Variable que alvergara los usuarios 
+  */
   usuarios: Iuser[] = [];
-  
-  constructor() { }
 
-  /*fUNCIONES PARA USUARIOS (REGISTRO, VERIFICAR, MOSTRAR) */
+  /*
+  fUNCIONES PARA USUARIOS (REGISTRO, VERIFICAR, MOSTRAR) 
+  */
   //Este metodo pedira el usuario que va registrar (almacenar en la variable usuarios)
   registUser(newUser: Iuser) {
     let isRegister:boolean = false;
@@ -21,6 +23,7 @@ export class UsersService {
     }
     return isRegister;
   }
+  
   //Esta funcion va devolver los valores de la variable usuarios
   getUsers() {
     return this.usuarios;

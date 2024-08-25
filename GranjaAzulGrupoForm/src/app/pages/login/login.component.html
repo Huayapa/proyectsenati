@@ -6,24 +6,26 @@
               <h2>Inicia sesión para continuar</h2>
               <hr>
           </div>
+          <!-- nombre -->
           <div>
-              <label class="campoLabel" for="usuario">Nombre de usuario:</label>
-              <input class="campoTexto" type="text" formControlName="usuario" name="usuario">
+            <label class="campoLabel" for="usuario">Nombre de usuario:</label>
+            <input class="campoTexto" type="text" formControlName="usuario" name="usuario">
           </div>
+          <!-- contraseña -->
           <div>
-              <label class="campoLabel" for="password">Contraseña:</label>
-              <input class="campoTexto" type="password" formControlName="password" name="password">
+            <label class="campoLabel" for="password">Contraseña:</label>
+            <input class="campoTexto" type="password" formControlName="password" name="password">
           </div>
           <span class="checkbox-container">
-              <input type="checkbox" id="rememberMe">
-              <label for="rememberMe">Recordar contraseña</label>
+            <input type="checkbox" id="rememberMe">
+            <label for="rememberMe">Recordar contraseña</label>
           </span>
           <div>
-              <span>¿Olvidaste tu contraseña? <a class="linkgoRegister" routerLink="/recover">Recuperar contraseña</a></span>
+            <span>¿Olvidaste tu contraseña? <a class="linkgoRegister" routerLink="/recover">Recuperar contraseña</a></span>
           </div>
           <div>
-          <!--  -->
-              <input class="loginButton" type="submit" value="Acceder">
+            <!-- boton de submit -->
+            <input class="loginButton" type="submit" value="Acceder">
           </div>
           <div class="loginContainer">
               <span>¿No tienes una cuenta? <a class="linkgoRegister" routerLink="/register">Registrate aquí</a></span>

@@ -25,7 +25,7 @@ export class LoginComponent {
   isLogin:boolean | null = null;
   //Intentos disponibles antes de ser bloqueados
   intentLogin = 4;
-  //Contador a mostrar 20s
+  //Contador a mostrar 10s
   contLogin = 10;
   //funcion pora verificar el login
   verficiarLoginUser() {

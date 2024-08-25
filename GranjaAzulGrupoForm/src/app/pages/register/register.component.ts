@@ -47,6 +47,7 @@ export class RegisterComponent  {
       }, 4000)
     }
   }
+  //cerrar modal
   cerrarModal() {
     this.isregist = null;
   }

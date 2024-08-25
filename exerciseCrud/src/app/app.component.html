@@ -1,0 +1,16 @@
+<header class="w-full flex justify-between gap-5 bg-slate-800 text-white absolute top-0">
+  <section class="pl-3 flex justify-center gap-4 items-center">
+    <img class="w-[4rem] p-2" src="https://seeklogo.com/images/A/angular-icon-logo-5FC0C40EAC-seeklogo.com.png" alt="">
+    <h1 class="font-bold text-2xl">Haciendo un CRUD con Angular</h1>
+  </section>
+  <nav class="pr-5 flex items-center justify-center gap-5">
+    <!-- bortones de direccionamiento -->
+    <button (click)="listar()" class="py-1 px-4 rounded-md bg-white text-slate-900 transition-all ease-out duration-500 hover:bg-slate-900 hover:text-white"  >Listar</button>
+    <button (click)="nuevo()" class="py-1 px-4 rounded-md bg-white text-slate-900 transition-all ease-out duration-500 hover:bg-slate-900 hover:text-white">Nuevo</button>
+  </nav>
+</header>
+<main class="w-[100%] h-[100vh]">
+  <section class="w-full h-full flex justify-center items-center">
+    <router-outlet></router-outlet>
+  </section>
+</main>
