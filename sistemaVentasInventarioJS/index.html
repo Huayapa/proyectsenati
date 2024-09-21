@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav-custom></nav-custom>
+  <main class="main-sistema">
+    <!-- seccion de ventas -->
+    <section class="orden-datos-vendedor">
+      <form method="post">
+        <div class="group-btn">
+          <button class="btn info">Nuevo</button>
+          <button class="btn success">Guardar</button>
+          <button class="btn alert">Editar</button>
+          <button class="btn danger">Borrar</button>
+        </div>
+        <article class="group-data">
+          <!-- orden de ventas -->
+          <section>
+            <h2>Orden de Ventas</h2>
+            <label class="main-input">Nombre del Cliente
+              <div class="group-input">
+                <input type="text" name="nombre" class="input" required disabled placeholder="Ingrese Producto">
+                <button class="btn-group" disabled>....</button>
+              </div>
+            </label>
+            <label class="main-input">Dni
+              <input type="text" name="dni" class="input" required disabled>
+            </label>
+            <label class="main-input">Telefono
+              <input type="text" name="tel" class="input" required disabled>
+            </label>
+            <label class="main-input">Dirección
+              <input type="text" name="direc" class="input" required disabled>
+            </label>
+          </section>
+          <!-- datos del vendedor -->
+          <section>
+            <h2>Datos del Vendedor</h2>
+            <label class="main-input">Vendedor
+              <input type="text" name="vendedor" class="input" required disabled>
+            </label>
+            <label class="main-input">Fecha
+              <input type="datetime-local" name="fecha" class="input" required disabled>
+            </label>
+          </section>
+        </article>
+      </form>
+    </section>
+    <!-- seccion de productos -->
+    <section class="table-prod-data">
+      <article >
+        <form method="post">
+          <h2>Datos del Producto</h2>
+            <label class="main-input">Productos
+              <input type="text" name="producto" class="input" required>
+            </label>
+            <label class="main-input">Descripcion
+              <input type="text" name="descript" class="input" required>
+            </label>
+            <div class="dividir">
+              <label class="main-input">Cantidad
+                <input type="number" name="cantidad" class="input" required>
+              </label>
+              <label class="main-input">Precio
+                <input type="text" name="precio" class="input" required>
+              </label>
+              <label class="main-input">Stock
+                <input type="number" name="stock" class="input" required>
+              </label>
+            </div>
+            <div class="group-btn">
+              <button class="btn info">Agregar</button>
+              <button class="btn danger">Cancelar</button>
+            </div>
+        </form>
+      </article>
+      <!-- tabla de los productos comprados por el usuario -->
+      <article class="section-table">
+        <table class="table-products">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Productos</th>
+              <th>Descripcion</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>cafe</td>
+              <td>es un cafe</td>
+              <td>3</td>
+              <td>S/20.22</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>cafe</td>
+              <td>es un cafe</td>
+              <td>3</td>
+              <td>S/20.22</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>cafe</td>
+              <td>es un cafe</td>
+              <td>3</td>
+              <td>S/20.22</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>cafe</td>
+              <td>es un cafe</td>
+              <td>3</td>
+              <td>S/20.22</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>cafe</td>
+              <td>es un cafe</td>
+              <td>3</td>
+              <td>S/20.22</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>cafe</td>
+              <td>es un cafe</td>
+              <td>3</td>
+              <td>S/20.22</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>cafe</td>
+              <td>es un cafe</td>
+              <td>3</td>
+              <td>S/20.22</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>cafe</td>
+              <td>es un cafe</td>
+              <td>3</td>
+              <td>S/20.22</td>
+              <td>40</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+</body>
+<script src="components/nav.js"></script>
+</html>
