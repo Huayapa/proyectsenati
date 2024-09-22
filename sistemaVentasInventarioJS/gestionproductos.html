@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav-custom></nav-custom>
+  <main class="main-sistema">
+    <!-- seccion de ventas -->
+    <form method="post" id="form-product">
+      <section class="orden-datos-vendedor">
+        <div class="group-btn">
+          <button class="btn info" id="newprod">Nuevo</button>
+          <button class="btn success">Guardar</button>
+          <button class="btn alert">Editar</button>
+          <button class="btn danger" id="deleteprod">Borrar</button>
+        </div>
+        <section class="group-data">
+          <article>
+            <h2>Datos del Producto</h2>
+            <label class="main-input">Productos
+              <input type="text" name="producto" class="elementInput input" required disabled>
+            </label>
+            <label class="main-input">Descripcion
+              <input type="text" name="descript" class="elementInput input" required disabled>
+            </label>
+              <label class="main-input">Cantidad
+                <input type="number" name="cantidad" class="elementInput input" required disabled>
+              </label>
+              <label class="main-input">Precio
+                <input type="text" name="precio" class="elementInput input" required disabled>
+              </label>
+              <label class="main-input">Stock
+                <input type="number" name="stock" class="elementInput input" required disabled>
+              </label>
+          </article>
+        </section>
+      </section>
+      <!-- seccion de productos -->
+      <section class="table-prod-data">
+        <!-- tabla de los productos comprados por el usuario -->
+        <article class="section-table-products">
+          <table class="table-products">
+            <thead>
+              <tr id="1-prod">
+                <th>Id</th>
+                <th>Productos</th>
+                <th>Descripcion</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Stock</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>cafe</td>
+                <td>es un cafe</td>
+                <td>3</td>
+                <td>S/20.22</td>
+                <td>40</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>cafe</td>
+                <td>es un cafe</td>
+                <td>3</td>
+                <td>S/20.22</td>
+                <td>40</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>cafe</td>
+                <td>es un cafe</td>
+                <td>3</td>
+                <td>S/20.22</td>
+                <td>40</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </form>
+  </main>
+</body>
+<script src="components/nav.js"></script>
+<script type="module" src="js/gestionproducts.js"></script>
+</html>
