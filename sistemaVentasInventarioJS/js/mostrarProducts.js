@@ -2,8 +2,9 @@
 export function mostrarProdsTable(idTableBody, nameStorage) {
   const $TableBody = document.getElementById(idTableBody);
   if(!window.localStorage.getItem(nameStorage)) {
-    $tr.innerHTML = "<td colspan='6' style='text-align: center'>No existen productos</td>";
-    $TableBody.appendChild($tr);
+    const $trnone = document.createElement("tr");
+    $trnone.innerHTML = "<td colspan='6' style='text-align: center'>No existen productos</td>";
+    $TableBody.appendChild($trnone);
     return;
   }
   const products = JSON.parse(localStorage.getItem(nameStorage));

@@ -79,10 +79,35 @@ export function addProductListNotFormClick(idBtnAdd, idAmountInput, nameStorage)
     let prodList = JSON.parse(localStorage.getItem("storageprod"));
     //descontar el producto al stock y cambiar la cantidad
     prodList[0].amount = $inputAmount.value;
-    if(prodList[0].stock <= 0 && prodList[0].stock - $inputAmount.value <= 0) {
+    if(prodList[0].stock <= 0 && (prodList[0].stock - $inputAmount.value) < 0) {
       throw "No tiene stock suficiente en el producto";
     }
     prodList[0].stock -= $inputAmount.value;
+    /*
+    Verificar que existe en el storage la lista de productos general
+    */
+    if(!localStorage.getItem("prods")) {
+      throw "No se existe la lista de productos general";
+    }
+    let prodsLists = JSON.parse(localStorage.getItem("prods"));
+    let indiceprod = 0;
+    let prodListFilterId = [];
+    prodsLists.forEach((prod, index) => {
+      if(prod.id == parseInt(prodList[0].id)) {
+        indiceprod = index;
+        prodListFilterId[0] = prod;
+      }
+    });
+    //Verificar que exista el id de el storage con la lista general
+    if(prodListFilterId.length <= 0) {
+      throw "Este producto no existe en la lista general";
+    }
+    
+    //modificar esos datos de la lista general
+    prodListFilterId[0].amount = $inputAmount.value;
+    prodListFilterId[0].stock -= $inputAmount.value;
+    prodsLists[indiceprod] = prodListFilterId;
+    
     /*
     Verificar si existe ese storage
     */
@@ -100,8 +125,10 @@ export function addProductListNotFormClick(idBtnAdd, idAmountInput, nameStorage)
     let ListArrayProd = StorageMain;
     ListArrayProd.push(prodList[0]);
     localStorage.setItem(nameStorage, JSON.stringify(ListArrayProd));
-    //El producto tambien actualizarlo en los datos de formulario
-    localStorage.setItem("storageprod", JSON.stringify(prodList))
+    //El producto tambien actualizarlo en los datos de formulario y el general
+    localStorage.setItem("storageprod", JSON.stringify(prodList));
+    localStorage.setItem("prods", JSON.stringify(prodsLists[0]));
+
     location.reload();
    })
   } catch (err) {
