@@ -209,4 +209,11 @@ DISEÑO GESTION DE PRODUCTOS
   max-height: 31rem;
   overflow-y: auto;
   overflow-x: hidden;
+  & tr, td {
+    cursor: pointer;
+  }
+  & tr:hover {
+    background-color: #26262650;
+
+  }
 }

@@ -56,26 +56,26 @@
           <h2>Datos del Producto</h2>
           <label class="main-input">Productos
             <div class="group-input">
-              <input type="text" name="producto" class="input" required disabled>
+              <input type="text" name="producto" class="local-storage input" required disabled>
               <button class="elementVenta btn-group" id="btnProduct" disabled>....</button>
             </div>
           </label>
           <label class="main-input">Descripcion
-            <input type="text" name="descript" class="input" required disabled>
+            <input type="text" name="descript" class="local-storage input" required disabled>
           </label>
           <div class="dividir">
             <label class="main-input">Cantidad
-              <input type="number" name="cantidad" class="input" required disabled>
+              <input type="number" name="cantidad" id="cantidad" class="elementVenta local-storage input" required disabled>
             </label>
             <label class="main-input">Precio
-              <input type="text" name="precio" class="input" required disabled>
+              <input type="text" name="precio" class="local-storage input" required disabled>
             </label>
             <label class="main-input">Stock
-              <input type="number" name="stock" class="input" required disabled>
+              <input type="number" name="stock" class="local-storage input" required disabled>
             </label>
           </div>
           <div class="group-btn">
-            <button class="btn info">Agregar</button>
+            <button class="btn info" id="addTicketProd">Agregar</button>
             <button class="btn danger">Cancelar</button>
           </div>
         </article>
@@ -92,15 +92,7 @@
                 <th>Stock</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>2</td>
-                <td>cafe</td>
-                <td>es un cafe</td>
-                <td>3</td>
-                <td>S/20.22</td>
-                <td>40</td>
-              </tr>
+            <tbody id="productos-factura">
             </tbody>
           </table>
         </article>

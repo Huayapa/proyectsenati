@@ -22,3 +22,10 @@ export function borrarVenta(btnActive, classElement) {
     })
   })
 }
+
+export function activeFormInit(classElement) {
+  const $elements = document.querySelectorAll(classElement);
+  $elements.forEach(el => {
+    el.removeAttribute("disabled");
+  })
+}
