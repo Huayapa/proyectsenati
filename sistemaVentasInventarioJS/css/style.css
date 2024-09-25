@@ -217,3 +217,18 @@ DISEÑO GESTION DE PRODUCTOS
 
   }
 }
+/*
+Estilo para borrar o cancelar una lista de producto
+*/
+#removeProdVenta:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+#productos-factura.isRemove tr {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#productos-factura.isRemove tr:hover {
+  background-color: rgb(168, 7, 7);
+  color: white;
+}

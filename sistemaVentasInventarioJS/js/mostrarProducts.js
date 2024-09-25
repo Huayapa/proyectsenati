@@ -15,9 +15,9 @@ export function mostrarProdsTable(idTableBody, nameStorage) {
       <td>${prod.id}</td>
       <td>${prod.product}</td>
       <td>${prod.descript}</td>
-      <td>${prod.amount}</td> 
+      <td class="amount-row">${prod.amount}</td> 
       <td>${prod.price}</td>
-      <td>${prod.stock}</td>
+      <td class="stock-row">${prod.stock}</td>
     `;
     $TableBody.appendChild($tr);
   });

@@ -79,7 +79,7 @@ export function addProductListNotFormClick(idBtnAdd, idAmountInput, nameStorage)
     let prodList = JSON.parse(localStorage.getItem("storageprod"));
     //descontar el producto al stock y cambiar la cantidad
     prodList[0].amount = $inputAmount.value;
-    if(prodList[0].stock <= 0 && (prodList[0].stock - $inputAmount.value) < 0) {
+    if(prodList[0].stock <= 0 || (prodList[0].stock - $inputAmount.value) < 0) {
       throw "No tiene stock suficiente en el producto";
     }
     prodList[0].stock -= $inputAmount.value;
