@@ -10,12 +10,62 @@
   <!-- COMPONENTES -->
   <script rel="preload" type="module" src="componentes/header/headerComponent.js"></script>
   <script rel="preload" type="module" src="componentes/footer/footerComponent.js"></script>
+  <script rel="preload" type="module" src="componentes/cardlocation/cardlocationComponent.js"></script>
 </head>
 <body>
   <header-component></header-component>
   <!-- Seccion del inicio -->
   <main id="main">
+    <section class="section_location_info">
+      <h1>Ubicación</h1>
+      <p>
+        Muebles pensados para cada rincón de tu hogar desde el lugar mas cercano para usted.
+      </p>
+      <button class="btn">Explora nuestros muebles</button>
+    </section>
 
+
+
+    <section class="section_location_maps">
+      <div class="map_list">
+        <cardlocation-component
+          titleCard = "Lima Norte"
+          directionCard = "Av. Nicolas Ayllon Mza.N Lote.18 Urb. Portales de Javier Prados"
+          horarioCard = "Lun a Dom de 10:00am a 10:00pm"
+          mapurlCard = "https://www.google.com/maps"
+        ></cardlocation-component>
+        <cardlocation-component
+          titleCard = "Lima Centro"
+          directionCard = "Jirón de la Unión 123, Cercado de Lima"
+          horarioCard = "Lun a Dom de 9:00am a 8:00pm"
+          mapurlCard = "https://www.google.com/maps?q=Jirón+de+la+Unión+123,+Cercado+de+Lima"
+        ></cardlocation-component>
+        <cardlocation-component
+          titleCard = "Miraflores"
+          directionCard = "Av. Pardo y Aliaga 650, Miraflores"
+          horarioCard = "Lun a Dom de 10:00am a 9:00pm"
+          mapurlCard = "https://www.google.com/maps?q=Av.+Pardo+y+Aliaga+650,+Miraflores"
+        ></cardlocation-component>
+        <cardlocation-component
+          titleCard = "San Isidro"
+          directionCard = "Av. Juan de Arona 456, San Isidro"
+          horarioCard = "Lun a Sab de 9:00am a 6:00pm"
+          mapurlCard = "https://www.google.com/maps?q=Av.+Juan+de+Arona+456,+San+Isidro"
+        ></cardlocation-component>
+        <cardlocation-component
+          titleCard = "Surco"
+          directionCard = "Av. Caminos del Inca 789, Santiago de Surco"
+          horarioCard = "Lun a Sab de 10:00am a 7:00pm"
+          mapurlCard = "https://www.google.com/maps?q=Av.+Caminos+del+Inca+789,+Santiago+de+Surco"
+        ></cardlocation-component>
+        <cardlocation-component
+          titleCard = "San Miguel"
+          directionCard = "Av. La Marina 1350, San Miguel"
+          horarioCard = "Lun a Dom de 10:00am a 9:00pm"
+          mapurlCard = "https://www.google.com/maps?q=Av.+La+Marina+1350,+San+Miguel"
+        ></cardlocation-component>
+      </div>
+    </section>
   </main>
   <footer-component></footer-component>
 </body>

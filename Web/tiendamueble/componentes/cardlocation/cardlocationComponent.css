@@ -1,0 +1,73 @@
+.card_map {
+  border-radius: 10px;
+  background-color: var(--color-secondary);
+  padding: 0.5rem 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & .map_info {
+    max-width: 24rem;
+    padding: 0.5rem 1rem;
+    & h2 {
+      margin: 0.5rem 0;
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    & .direccion {
+      height: 2rem;
+      margin: 0;
+    }
+    & p {
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      /* white-space: nowrap; */
+    }
+  }
+  & .map_btn {
+    text-decoration: none;
+    & button {
+      cursor: pointer;
+      margin: 1rem;
+      border: 0;
+      background-color: var(--color-primary);
+      padding: 1rem;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+      & svg {
+        fill: var(--color-secondary);
+      }
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:850px) {
+  .card_map {
+    & .map_info {
+      padding: 0;
+    }
+    & .map_btn button {
+      margin: 0.2rem;
+    }
+  }
+}
+
+@media screen and (max-width:300px) {
+  .card_map {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    & .map_info {
+      width: 100%;
+    }
+    & .map_btn button {
+      width: 100%;
+    }
+  }
+}

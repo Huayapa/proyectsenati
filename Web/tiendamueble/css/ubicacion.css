@@ -1,0 +1,123 @@
+
+#main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* *
+* SECCIONES DE INFORMACION Y LOCALIZACIONES
+* */
+
+.section_location_info,
+.section_location_maps {
+  background-size: cover;
+  background-position: center;
+}
+
+.section_location_info {
+  width: 100%;
+  max-height: 60rem;
+  background-image: 
+    linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/img/fondoubicacion.webp");
+}
+
+.section_location_maps {
+  width: 100%;
+  max-height: 60rem;
+  background-image: 
+    linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/img/fondolocationmaps.png");
+}
+
+
+
+/* *
+* SECCIONES DE INFORMACION
+* */
+
+.section_location_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  padding: 2rem;
+  padding-left: 4rem;
+  color: var(--color-secondary);
+  & h1 {
+    font-size: var(--title-xl);
+    margin: 0;
+  }
+  & p {
+    max-width: 40rem;
+    width: 100%;
+    font-size: var(--text-xl);
+    
+  }
+  & .btn {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: var(--text);
+    border: 0;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    transition: all 0.6s ease;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}
+
+/* *
+* SECCIONES DE LOCALIZACION
+* */
+.section_location_maps {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  & .map_list {
+    padding: 1rem;
+    height: 64vh;
+    max-height: 40rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.section_location_maps .map_list::-webkit-scrollbar{
+  width: 0.5vw;
+  min-width: 8px;
+  background-color: var(--color-secondary);
+  border-radius: 20px;
+}
+.section_location_maps .map_list::-webkit-scrollbar-thumb  {
+  background-color: var(--color-primary);
+}
+
+
+/* *
+* ADAPTACION MOBILE
+* */
+@media screen and (max-width:850px) {
+  #main {
+    grid-template-columns: 1fr;
+  }
+  .section_location_info {
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    word-break: break-all;
+  }
+}
+
+
