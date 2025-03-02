@@ -4,7 +4,7 @@ class HeaderComponent extends HTMLElement {
     inicio: {nombre: "Inicio", ruta: "index.html"},
     productos: {nombre: "Productos", ruta: "#"},
     servicios: {nombre: "Servicios", ruta: "#"},
-    ubicacion: {nombre: "Ubicación", ruta: "#"},
+    ubicacion: {nombre: "Ubicación", ruta: "ubicacion.html"},
     fqa: {nombre: "FQA", ruta: "#"},
     nosotros: {nombre: "Nosotros", ruta: "nosotros.html"},
   };
