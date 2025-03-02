@@ -1,0 +1,146 @@
+/*! FUENTES DE TIPOGRAFICOS */
+@font-face {
+  font-family: 'NotoSerif-Medium';
+  src: url('assets/fonts/NotoSerif-Medium.woff2') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'NotoSerif-Bold';
+  src: url('assets/fonts/NotoSerif-Bold.woff2') format('truetype');
+  font-weight: medium;
+}
+/*! RESETEAR ESTILOS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/*! SCROLL */
+
+body::-webkit-scrollbar{
+  width: 0.5vw;
+  min-width: 8px;
+  background-color: var(--color-secondary);
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb  {
+  background-color: var(--color-primary-alt);
+}
+
+/*! VARIABLES */
+:root {
+  /* * COLORES */
+  --color-primary: #000000;
+  --color-primary-alt: #0D0D0D;
+  --color-primary-header: #00000055;
+  --color-primary-footer: #0D0D0D;
+  --color-primary-hover: #00000088;
+  --color-primary-hover-card: #00000065;
+  --color-primary-line: #000000;
+
+  --color-secondary: #ffffff;
+
+  --color-tertiary: #800020;
+  --color-tertiary-hover: #4b0113;
+
+
+  --color-border-card: #E8E8E8;
+  /* * TAMAÑO */
+  --title-home: clamp(1.4rem, 7vw, 4rem);
+  --title-oferta: clamp(1rem, 5vw, 1.4rem);
+  --title: clamp(1.5rem, 5vw, 2.8rem);
+  --sub-title: clamp(1.5rem, 5vw, 2.2rem);
+  --sub-title2: clamp(1rem, 3vw, 1.6rem);
+  --text: clamp(1rem, 3vw, 1.6rem);
+  --min-text: clamp(0.8rem, 5vw, 1rem);
+  --text-btn: clamp(0.8rem, 2vw, 1.2rem);
+  --price: clamp(1rem, 3vw, 3rem);
+  --sub-price: clamp(1rem, 5vw, 1.8rem);
+}
+
+/*! ANIMACIONES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* !CONTENIDO PRINCIPAL EN TODOS LOS PROYECTOS */
+
+#main {
+  max-width: 120rem;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* !ESTILO DE BOTON BASICO */
+.btnStyleBase {
+  cursor: pointer;
+  max-width: fit-content;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 0;
+  color: var(--color-secondary);
+  background-color: var(--color-tertiary);
+  font-size: var(--text-btn);
+  text-decoration: none;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: var(--color-tertiary-hover);
+  }
+}
+
+/* !ESTILO DE TITULO*/
+.title_line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  & h2 {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0;
+    font-size: var(--sub-title);
+    border-bottom: 4px solid var(--color-primary-line);
+    text-align: center;
+  }
+}
+
+
+.subtitle_line {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  & h2 {
+    width: fit-content;
+    margin: 0;
+    padding: 1rem 0;
+    font-size: var(--sub-title);
+    border-bottom: 4px solid var(--color-primary-line);
+    text-align: start;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .title_line h2 {
+    width: fit-content;
+  }
+  .subtitle_line {
+    justify-content: center;
+  }
+  .subtitle_line h2 {
+    width: fit-content;
+    text-align: center;
+  }
+}

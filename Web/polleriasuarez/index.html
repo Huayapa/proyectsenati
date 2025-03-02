@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polleria Suarez - Inicio</title>
+  <!-- Permisos de politicas -->
+  <meta http-equiv="Permissions-Policy" content="browsing-topics=(), interest-cohort=(), attribution-reporting=()">
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/inicio.css">
+  <!-- COMPONENTES -->
+  <script rel="preload" type="module" src="components/header/headerComponent.js"></script>
+  <script rel="preload" type="module" src="components/footer/footerComponent.js"></script>
+  <script rel="preload" type="module" src="components/cardOferta/cardOfertaComponent.js"></script>
+  <script rel="preload" type="module" src="components/cardProd/cardprodComponent.js"></script>
+</head>
+<body>
+  <header-component></header-component>
+  <!-- Contenido principal -->
+  <main id="main">
+    <!-- SECCION INICIO -->
+    <section class="section_home">
+      <!-- CARRUSEL -->
+      <article class="home_slider">
+        <!-- TODAS LAS OFERTAS QUE SE MOSTRARAN -->
+        <cardoferta-component
+          titleCard = "Pollo a la brasa familiar 1"
+          imgCard = "assets/img/oferta1.png"
+          priceCard = "30"
+          idCard = "1"
+        ></cardoferta-component>
+        <cardoferta-component
+          titleCard = "Pollo a la brasa familiar 2"
+          imgCard = "assets/img/oferta1.png"
+          priceCard = "20"
+          idCard = "1"
+        ></cardoferta-component>
+        <cardoferta-component
+          titleCard = "Pollo a la brasa familiar 3"
+          imgCard = "assets/img/oferta1.png"
+          priceCard = "10"
+          idCard = "1"
+        ></cardoferta-component>
+        <cardoferta-component
+          titleCard = "Pollo a la brasa familiar 4"
+          imgCard = "assets/img/oferta1.png"
+          priceCard = "50"
+          idCard = "1"
+        ></cardoferta-component>
+        <!-- BOTONES DE INTERACCION -->
+        <button class="carousel-button" id="prev">❮</button>
+        <button class="carousel-button" id="next">❯</button>
+      </article>
+
+      
+      <article class="home_maininfo">
+        <h1>Pollería Suarez</h1>
+        <p>Disfruta de los mejores pollos a los mejores precios.</p>
+        <a href="menus.html" class="btnStyleBase" >
+          Explorar menús
+        </a>
+      </article>
+    </section>
+
+
+    <!-- SECCION DE BIENVENIDA -->
+    <section class="section_welcome">
+      <h2>Bienvenido</h2>
+      <p>
+        Bienvenidos a la Pollería Suárez, un espacio donde la cocina de autor se encuentra con un ambiente único. Ven y disfruta de una experiencia culinaria inolvidable.
+      </p>
+      <svg  viewBox="0 0 694 279" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <mask id="mask0_7_274" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="694" height="279">
+        <rect y="16" width="126" height="248" fill="#D9D9D9"/>
+        <rect x="568" y="21" width="126" height="248" fill="#D9D9D9"/>
+        <rect x="142" width="126" height="279" fill="#D9D9D9"/>
+        <rect x="284" width="126" height="279" fill="#D9D9D9"/>
+        <rect x="426" width="126" height="279" fill="#D9D9D9"/>
+        </mask>
+        <g mask="url(#mask0_7_274)">
+        <rect width="694" height="279" fill="url(#pattern0_7_274)"/>
+        </g>
+        <defs>
+        <pattern id="pattern0_7_274" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlink:href="#image0_7_274" transform="matrix(0.0012285 0 0 0.00305584 0 -0.155478)"/>
+        </pattern>
+        <image id="image0_7_274" width="814" height="429" preserveAspectRatio="none" xlink:href="assets/img/pollofondo.jpg"/>
+        </defs>
+        </svg>
+        
+    </section>
+
+
+    <!-- SECCION DE PRODUCTOS -->
+    <section class="section_prods">
+      <div class="title_line">
+        <h2>Más Comprados</h2>
+      </div>
+      <article class="list_cardprods">
+        <cardprod-component
+          titleCard = "Pollo familiar"
+          imgCard = "assets/img/polloprod.jpg"
+          priceCard = "90"
+          descriptCard = "
+          <ul>
+            <li>1 gaseosa 3L</li>
+            <li>1 pollo</li>
+            <li>Ensalada</li>
+            <li>Papas</li>
+          </ul>
+          "
+          idCard = "1"
+        ></cardprod-component>
+        <cardprod-component
+          titleCard = "Pollo familiar"
+          imgCard = "assets/img/polloprod.jpg"
+          priceCard = "90"
+          descriptCard = "
+          <ul>
+            <li>1 gaseosa 3L</li>
+            <li>1 pollo</li>
+            <li>Ensalada</li>
+            <li>Papas</li>
+          </ul>
+          "
+          idCard = "1"
+        ></cardprod-component>
+        <cardprod-component
+          titleCard = "Pollo familiar"
+          imgCard = "assets/img/polloprod.jpg"
+          priceCard = "90"
+          descriptCard = "
+          <ul>
+            <li>1 gaseosa 3L</li>
+            <li>1 pollo</li>
+            <li>Ensalada</li>
+            <li>Papas</li>
+          </ul>
+          "
+          idCard = "1"
+        ></cardprod-component>
+      </article>
+    </section>
+
+
+    <!-- SECCION DE MOSTRAR SUCURSALES -->
+    <article class="section_sucursal">
+      <h2>Te estaremos esperando en nuestras sucursales</h2>
+      <p>Estamos en todo Perú para que disfruten de nuestro sabor.</p>
+      <a href="locales.html" class="btnStyleBase">Ver sucursales</a>
+    </article>
+  </main>
+
+  <footer-component></footer-component>
+  <script src="js/inicio.js"></script>
+</body>
+</html>

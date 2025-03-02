@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polleria Suarez - Locales</title>
+  <!-- Permisos de politicas -->
+  <meta http-equiv="Permissions-Policy" content="browsing-topics=(), interest-cohort=(), attribution-reporting=()">
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/locales.css">
+  <!-- COMPONENTES -->
+  <script rel="preload" type="module" src="components/header/headerComponent.js"></script>
+  <script rel="preload" type="module" src="components/footer/footerComponent.js"></script>
+  <script rel="preload" type="module" src="components/cardLocation/cardlocationComponent.js"></script>
+</head>
+<body>
+  <header-component></header-component>
+  <!-- Contenido principal -->
+  <main id="main">
+    <article class="content_homeTitle">
+      <h1>Nuestros Locales</h1>
+      <p>Visita el local más cercano de tu zona.</p>
+    </article>
+    
+
+    <article class="content_location">
+      <cardlocation-component
+        distritoCard = "Ate"
+        directionCard = "Intersección de la Av. Abancay N.º 616 y el Jr. Cuzco N.º 496, LIMA - LIMA"
+        imgCard = "assets/img/ubicacionpolleria.webp"
+        horariosCard = "
+        <li>Lunes a viernes 6:50am / 12:30pm</li>
+        <li>Sabado 6:50am / 12:30pm</li>
+        "
+        numberCard = "+51 823 092 121"
+        urlCard = "https://www.google.com/maps"
+      ></cardlocation-component>
+      <cardlocation-component
+        distritoCard = "Santa Anita"
+        directionCard = "Intersección de la Av. Abancay N.º 616 y el Jr. Cuzco N.º 496, LIMA - LIMA"
+        imgCard = "assets/img/ubicacionpolleria.webp"
+        horariosCard = "
+        <li>Lunes a viernes 6:50am / 12:30pm</li>
+        <li>Sabado 6:50am / 12:30pm</li>
+        "
+        numberCard = "+51 823 092 121"
+        urlCard = "https://www.google.com/maps"
+      ></cardlocation-component>
+      <cardlocation-component
+        distritoCard = "Independencia"
+        directionCard = "Intersección de la Av. Abancay N.º 616 y el Jr. Cuzco N.º 496, LIMA - LIMA"
+        imgCard = "assets/img/ubicacionpolleria.webp"
+        horariosCard = "
+        <li>Lunes a viernes 6:50am / 12:30pm</li>
+        <li>Sabado 6:50am / 12:30pm</li>
+        "
+        numberCard = "+51 823 092 121"
+        urlCard = "https://www.google.com/maps"
+      ></cardlocation-component>
+    </article>
+  </main>
+
+  <footer-component></footer-component>
+</body>
+</html>

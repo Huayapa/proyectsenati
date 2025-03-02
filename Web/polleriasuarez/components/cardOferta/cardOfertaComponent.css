@@ -1,0 +1,78 @@
+:host {
+  transition: all 0.5s ease;
+}
+
+.btnStyleBase {
+  cursor: pointer;
+  max-width: fit-content;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 0;
+  color: var(--color-secondary);
+  background-color: var(--color-tertiary);
+  font-size: var(--text-btn);
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: var(--color-tertiary-hover);
+  }
+}
+
+
+.ofertacard {
+  /* max-width: 32rem; */
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+  padding: 0.5rem;
+  & img {
+    max-width: 14rem;
+    width: 100%;
+    min-width: 8rem;
+    height: 20rem;
+    object-fit: contain;
+  }
+  & div {
+    width: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    gap: 0.5rem;
+    & h2 {
+      margin: 0;
+      font-size: var(--title-oferta);
+      color: var(--color-secondary);
+    }
+    & .price {
+      width: 100%;
+      text-align: center;
+      font-size: var(--price);
+      color: var(--color-secondary);
+    }
+    & h3 {
+      width: 100%;
+      margin: 0;
+      font-size: var(--title-oferta);
+      text-align: center;
+      color: var(--color-tertiary);
+    }
+  }
+}
+
+
+@media screen and (max-width: 300px)  {
+  .ofertacard {
+    padding: 2rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    & img {
+      height: 6rem;
+    }
+  }
+}

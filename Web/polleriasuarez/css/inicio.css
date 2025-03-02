@@ -1,0 +1,194 @@
+/* *
+* SECCION DEL HOME 
+* */
+.section_home {
+  width: 100%;
+  min-height: 30rem;
+  padding: 1rem;
+  background: 
+    url("../assets/img/fondohome.jpg")
+    right top no-repeat border-box border-box scroll
+  ;
+  background-size: cover;
+  
+  /* *flex */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* !SECCION DE OFERTAS */
+.home_slider {
+  margin-left: 2rem;
+  max-width: 32rem;
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+
+  /* *FLEX */
+  display: flex;
+  align-items: center;
+  & cardoferta-component {
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+}
+
+
+/* !SECCION DE INFORMACION PRINCIPAL */
+.home_maininfo {
+  text-align: end;
+  margin-right: 2rem;
+
+  /* *flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  transition: all 0.5s ease;
+  & h1 {
+    color: var(--color-secondary);
+    font-size: var(--title-home);
+    margin: 0;
+  }
+  & p {
+    max-width: 24rem;
+    font-size: var(--text);
+    color: var(--color-secondary);
+  }
+}
+/* !FLECHAS DE IZQUIERDA Y DERECHA */
+.carousel-button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 1rem;
+  margin: 0.5rem;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  background-color: transparent;
+  color: var(--color-secondary);
+  transition: all 0.5s ease;
+  font-size: var(--title-home);
+  &#prev {
+    left: 0;
+  }
+  &#next {
+    right: 0;
+  }
+  &:hover {
+    background-color: var(--color-primary-hover-card);
+  }
+}
+
+
+@media screen and (max-width: 770px)  {
+  .section_home {
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    gap: 0.5rem;
+  }
+
+  .home_maininfo {
+    width: 100%;
+    margin: 0;
+    margin-top: 4rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home_slider {
+    margin: 0;
+    justify-content: start;
+  }
+}
+
+/* *
+* SECCION DE BIENVENIDA
+* */
+
+.section_welcome {
+  width: 100%;
+  min-height: 30rem;
+  background-color: var(--color-primary-alt);
+  text-align: center;
+  padding: 4rem 0;
+
+  /* *Flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-secondary);
+  & h2 {
+    margin: 1rem 0;
+    font-size: var(--title);
+  }
+  & p {
+    max-width: 50rem;
+    width: 100%;
+    font-size: var(--text);
+    line-height: 2rem;
+    padding: 1rem;
+  }
+  & svg {
+    max-width: 60rem;
+    width: 100%;
+    padding: 0 3rem;
+    min-width: 10rem;
+  }
+}
+
+/* *
+* SECCION DE PRODUCTOS
+* */
+
+
+.section_prods {
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  & .list_cardprods {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 22rem));
+    gap: 26px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+/* *
+* SECCION DE MOSTRAR SUCURSALES
+* */
+
+.section_sucursal {
+  width: 100%;
+  min-height: 70vh;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+  url("../assets/img/sucursalfondo.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /*filter: brightness(70%);*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-secondary);
+  text-align: center;
+  & h2 {
+    max-width: 40rem;
+    font-size: var(--title);
+    margin: 1rem 0;
+  }
+  & p {
+    font-size: var(--text);
+    font-weight: normal;
+  }
+}

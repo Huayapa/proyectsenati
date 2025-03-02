@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El rey del mueble</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/inicio.css">
+  <script rel="preload" type="module" src="componentes/header/headerComponent.js"></script>
+  <script rel="preload" type="module" src="componentes/blog/blogComponent.js"></script>
+  <script rel="preload" type="module" src="componentes/footer/footerComponent.js"></script>
+  <script rel="preload" type="module" src="componentes/cardprod/cardprodComponent.js"></script>
+</head>
+<body>
+  <header-component></header-component>
+  <!-- Seccion del inicio -->
+  <main id="main">
+
+    <!-- SECCION DEL HOME -->
+    <section class="section_home">
+      <article class="section_info">
+        <h1>Estiliza tus espacios con modernidad</h1>
+        <h2>Venta y servicios de muebles.</h2>
+      </article>
+      <article class="section_btn">
+        <button>Buscar Muebles</button>
+      </article>
+    </section>
+
+    <!-- SECCION DE PRODUCTOS -->
+    <section class="section_prods">
+      <h2>Productos Destacados</h2>
+      <article class="list_prods">
+        <!-- Aqui va los productos -->
+      </article>
+    </section>
+
+    <!-- SECCION DE MOSTRAR UBICACIÓN -->
+    <section class="section_location">
+      <article class="location_info">
+        <h2>Encuentra muebles a medida para ti</h2>
+        <p>
+          En El Rey de los Muebles, sabemos que cada espacio tiene su propia personalidad, y tu hogar no es la excepción. Por eso, en nuestra sección "Encuentra muebles para ti", ponemos a tu disposición una amplia variedad de opciones para que encuentres justo lo que necesitas. Desde cómodos sofás, mesas elegantes, hasta muebles que maximizan el espacio, tenemos todo lo que necesitas para crear el ambiente perfecto.
+        </p>
+        <button>
+          Puedes encontrarnos en... 
+        </button>
+      </article>
+      <img src="assets/img/muebleubicacion.jpg" alt="Encuentra muebles a medida para ti">
+    </section>
+
+    <!-- SECCION PARA MOSTRAR BLOG DE MUEBLES -->
+    <section class="section_blog">
+      <h2>Cuida tus muebles</h2>
+      <article class="list_blog">
+      </article>
+    </section>
+  </main>
+  <footer-component></footer-component>
+  <script>
+    // Este script es para obtener las cards que se mostraran
+    const $list_prods = document.querySelector(".list_prods");
+    const $fragment = document.createDocumentFragment();
+    fetch("https://furniture-api.fly.dev/v1/products?limit=3&page=1")
+      .then(rest => rest.json())
+      .then(json => {
+        json.data.forEach(({name, image_path, price}) => {
+          const $card = document.createElement("cardprod-component");
+          $card.setAttribute("titleprod", name);
+          $card.setAttribute("urlprod",image_path );
+          $card.setAttribute("priceprod", price);
+          $fragment.appendChild($card);
+        });
+        $list_prods.appendChild($fragment)
+      })
+
+
+    // ESTE SCRIPT SIRVE PARA MOSTRAR LOS BLOGS
+    const $list_blog = document.querySelector(".list_blog");
+    const $fragment2 = document.createDocumentFragment();
+    fetch("api/blogs.json")
+      .then(rest => rest.json())
+      .then(json => {
+        console.log(json);
+        json.forEach(({title, urlBlog, date, id}) => {
+          const $card = document.createElement("blog-component");
+          $card.setAttribute("titleBlog", title);
+          $card.setAttribute("urlBlog",urlBlog );
+          $card.setAttribute("dateBlog", date);
+          $card.setAttribute("idblog", id);
+          $fragment2.appendChild($card);
+        });
+        $list_blog.appendChild($fragment2)
+      })
+  </script>
+</body>
+</html>
+
+<!-- https://furniture-api.fly.dev/v1/products   -->

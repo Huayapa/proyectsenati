@@ -1,0 +1,63 @@
+* ,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/*! VARIABLES */
+:root {
+  /* * COLORES */
+  --color-primary: #000000;
+  --color-primary-header: #00000035;
+  --color-primary-header-hover: #00000065;
+  --color-primary-footer: #000000;
+  --color-primary-nav-mobile: #00000040;
+  --color-primary-card: #00000040;
+
+  --color-secondary: #ffffff;
+
+
+  --color-secondary-btn: #D9D9D921;
+
+  --color-tertiary: #572F1B;
+
+  --color-scrool: #865b2165;
+
+  --border-color-card: #C6C6C6;
+  --color-italic: #808080;
+  /* * TIPOGRAFIAS */
+  --title-home: clamp(2rem, 7vw, 4rem);
+  --title: clamp(1rem, 4vw, 2.2rem);
+  --subtitle-home: clamp(1rem, 5vw, 1.2rem);
+  --subtitle: clamp(1rem, 5vw, 1.2rem);
+  --price: clamp(1.2rem, 5vw, 1.5rem);
+  --text: clamp(0.8rem, 2vw, 1.2rem);
+}
+/*! ESTILOS DE LA BARRA DE NAVEGACIÓN */
+
+body::-webkit-scrollbar{
+  width: 0.5vw;
+  min-width: 8px;
+  background-color: var(--color-secondary);
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb  {
+  background-color: var(--color-scrool);
+}
+
+
+/*! ESTILOS DEL MAIN PARA TODAS LAS PAGINAS */
+main {
+  max-width: 120rem;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+

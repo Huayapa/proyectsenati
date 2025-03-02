@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polleria Suarez - Login</title>
+  <!-- Permisos de politicas -->
+  <meta http-equiv="Permissions-Policy" content="browsing-topics=(), interest-cohort=(), attribution-reporting=()">
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <!-- COMPONENTES -->
+  <script rel="preload" type="module" src="components/header/headerComponent.js"></script>
+  <script rel="preload" type="module" src="components/footer/footerComponent.js"></script>
+</head>
+<body>
+  <header-component></header-component>
+  <!-- Contenido principal -->
+  <main id="main">
+    <section class="section_login">
+      <img src="assets/img/pollofondoinicio.jpg" alt="">
+      <article class="login_info">
+        <div class="info_title">
+          <h1>Pollería Suarez</h1>
+          <p>Por favor, ingresa a tu cuenta.</p>
+        </div>
+        <form method="post" id="form-login">
+          <input 
+            type="text"
+            name="usuario"
+            id="usuario"
+            placeholder="Usuario"
+            maxlength="40"
+            required
+          >
+          <input 
+            type="text"
+            name="contra"
+            id="contra"
+            placeholder="Contraseña"
+            maxlength="100"
+            required
+          >
+          <button type="submit" class="btnStyleBase">Iniciar sesión</button>
+        </form>
+      </article>
+    </section>
+  </main>
+  <footer-component></footer-component>
+  <script src="js/login.js"></script>
+</body>
+</html>

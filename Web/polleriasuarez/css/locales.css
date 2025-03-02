@@ -1,0 +1,43 @@
+/* *
+* SECCION DE INICIO LOCAL
+* */
+.content_homeTitle {
+  width: 100%;
+  min-height: 26rem;
+  padding: 1rem;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url("../assets/img/fondolocalizacion.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-secondary);
+  text-align: center;
+  & h1 {
+    margin: 0;
+    font-size: var(--title-home);
+  }
+  & p {
+    font-size: var(--text);
+  }
+}
+
+/* *
+* SECCION DE LA LISTA DE UBICACIONES
+* */
+
+.content_location {
+  max-width: 60rem;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+

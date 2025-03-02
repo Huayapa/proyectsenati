@@ -1,0 +1,130 @@
+/* !CARD LOCATION */
+
+.card_location {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--color-border-card);
+  & .location_img {
+    position: relative;
+    max-width: 26rem;
+    width: 100%;
+    height: 22rem;
+    & img {
+      max-width: 26rem;
+      width: 100%;
+      height: 22rem;
+      object-fit: cover;
+    }
+    & .location_fondo {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 22rem;
+      background-color: var(--color-primary-hover-card);
+    }
+    & h2 {
+      width: 100%;
+      position: absolute;
+      overflow: hidden;
+      bottom: 1rem;
+      left: 1rem;
+      margin: 0;
+      text-overflow: ellipsis;
+      font-size: var(--sub-title);
+      color: var(--color-secondary);
+    }
+  }
+  & .location_info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    & .info_p {
+      margin: 0;
+      font-size: var(--min-text);
+      color: var(--color-primary);
+    }
+    & .info_subtitle {
+      font-size: var(--sub-title2);
+      color: var(--color-primary);
+      margin: 0;
+    }
+    & .info_horarios {
+      list-style-position: inside;
+      padding: 0;
+      padding-left: 0.5rem;
+      & li {
+        font-size: var(--min-text);
+        color: var(--color-primary);
+      }
+    }
+    & .info_tel_location {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      & a {
+        display: flex;
+        justify-content: start;
+        gap: 0.5rem;
+        align-items: center;
+        text-decoration: none;
+        color: var(--color-primary);
+        font-size: var(--text);
+        & strong {
+          font-weight: normal;
+        }
+      }
+      & .btnStyleBase {
+        cursor: pointer;
+        cursor: pointer;
+        max-width: fit-content;
+        width: 100%;
+        padding: 0.8rem 2rem;
+        border: 0;
+        color: var(--color-secondary);
+        background-color: var(--color-tertiary);
+        font-size: var(--text-btn);
+        transition: all 0.5s ease;
+        &:hover {
+          background-color: var(--color-tertiary-hover);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card_location {
+    flex-wrap: wrap;
+    justify-content: center;
+    & .location_img, 
+      .location_img img, 
+      .location_img .location_fondo {
+      max-width: 100%;
+      height: 6rem;
+      & h2 {
+        text-align: center;
+        left: 0;
+        bottom: auto;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    & .location_info {
+      width: 100%;
+      & .info_tel_location {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 0.8rem;
+        & .btnStyleBase {
+          max-width: 4rem;
+          width: 100% ;
+          padding: 0.8rem 0.2rem;
+        }
+      }
+    }
+
+  }
+}

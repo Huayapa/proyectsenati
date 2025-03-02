@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polleria Suarez - DetalleProducto</title>
+  <!-- Permisos de politicas -->
+  <meta http-equiv="Permissions-Policy" content="browsing-topics=(), interest-cohort=(), attribution-reporting=()">
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/detalleprod.css">
+  <!-- COMPONENTES -->
+  <script rel="preload" type="module" src="components/header/headerComponent.js"></script>
+  <script rel="preload" type="module" src="components/footer/footerComponent.js"></script>
+</head>
+<body>
+  <header-component></header-component>
+  <!-- Contenido principal -->
+  <main id="main">
+    <section class="section_prod">
+      <img src="assets/img/polloprod.jpg" alt="">
+      <article class="prod_info">
+        <h2>Pollo para dos</h2>
+        <div class="info_descript">
+          <h3>Descripción</h3>
+          <ul>
+            <li>2 Paquetes de papas</li>
+            <li>1/2 de Pollo</li>
+            <li>Ensaladas</li>
+            <li>1L de gaseosa</li>
+          </ul>
+        </div>
+
+        <section class="info_cantidad_precio">
+          <div class="cantidad_info">
+            <button>+</button>
+            <div>0</div>
+            <button>-</button>
+          </div>
+          <div class="price_btn">
+            <strong class="price">S/ 80.00</strong>
+            <button class="btnStyleBase">Agregar</button>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <footer-component></footer-component>
+</body>
+</html>

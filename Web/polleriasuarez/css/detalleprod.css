@@ -1,0 +1,115 @@
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* *
+* SECCION DE PRODUCTO
+* */
+.section_prod {
+  margin: 1rem;
+  max-width: 70rem;
+  width: 100%;
+  height: 30rem;
+
+  /* *flex */
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--color-border-card);
+  & img {
+    max-width: 30rem;
+    width: 100%;
+    min-width: 10rem;
+    object-fit: cover;
+  }
+  & .prod_info {
+    max-width: 40rem;
+    width: 100%;
+    padding: 2rem;
+
+    /* * flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    word-break: break-all;
+    & h2 {
+      font-size: var(--title);
+      margin: 0;
+      color: var(--color-primary);
+    }
+    & .info_descript {
+      & p {
+        margin: 0;
+        font-size: var(--min-text);
+        color: var(--color-primary);
+      }
+      & ul {
+        padding: 0;
+        list-style-position: inside;
+        & li {
+          font-size: var(--min-text);
+          color: var(--color-primary);
+        }
+      }
+    }
+    & .info_cantidad_precio {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & .cantidad_info {
+        display: flex;
+        justify-content: center;
+        border: 1px solid var(--color-border-card);
+        & button {
+          cursor: pointer;
+          border: 0;
+          background-color: transparent;
+          padding: 1rem 1rem;
+          transition: all 0.5s ease;
+          &:hover {
+            background-color: var(--color-primary-hover);
+          }
+        }
+        & div {
+          padding: 1rem 1rem;
+          border-left: 1px solid var(--color-border-card);
+          border-right: 1px solid var(--color-border-card);
+        }
+      }
+      & .price_btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        & .price {
+          font-weight: normal;
+          font-size: var(--price);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section_prod {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    & img {
+      max-width: 100%;
+      width: 100%;
+      min-height: 12rem;
+      height: 12rem;
+      border-radius: 0;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+    & .prod_info .info_cantidad_precio {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+}

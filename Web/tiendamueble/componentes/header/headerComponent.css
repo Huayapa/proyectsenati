@@ -1,0 +1,121 @@
+#header {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  & .header_logo object {
+    width: 100%;
+  }
+  & .header_nav {
+    background-color: var(--color-primary-header);
+    display: flex;
+    justify-content: end;
+    border-end-start-radius: 2rem;
+    padding: 0 0 0 1rem;
+    & nav {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      
+      & a {
+        display: block;
+        padding: 1rem 1rem;
+        color: var(--color-secondary);
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: all 0.5s ease;
+        &:hover {
+          border-radius: 0.5rem;
+          background-color: var(--color-primary-header-hover);
+        }
+      }
+    }
+  }
+}
+
+.menu-btn {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+.center {
+  width: 2rem;
+}
+
+.center:before,
+.center:after,
+.center div {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  margin: 4px 0;
+  transition: 0.5s;
+}
+
+/* Animacion de boton activadao */
+.menu-btn.activeBtn .center:before {
+  transform: translateY(10px) rotate(45deg);
+}
+.menu-btn.activeBtn .center:after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+.menu-btn.activeBtn .center div {
+  transform: scale(0);
+}
+@media screen and (max-width: 800px) {
+  .menu-btn {
+    display: block;
+  }
+  #header .header_nav .nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary-nav-mobile);
+    top: 4rem;
+    border-radius: 1rem 0 0 1rem;
+    right: 0;
+    & a {
+      width: 100%;
+      text-align: end;
+      box-sizing: border-box;
+      padding: 1rem ;
+    }
+    &.activeBtn {
+      animation: moveLeftMenu 0.5s forwards;
+    }
+    &:not(.activeBtn) {
+      animation: moveRightMenu 0.5s forwards;
+    }
+  }
+}
+
+
+@keyframes moveLeftMenu {
+  from {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+}
+
+@keyframes moveRightMenu {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+}
