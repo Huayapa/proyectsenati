@@ -1,0 +1,10 @@
+body {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  transition: all 0.5s ease;
+}
+@media screen and (max-width: 720px) {
+  body {
+    grid-template-columns: 4rem 1fr;
+  }
+}
