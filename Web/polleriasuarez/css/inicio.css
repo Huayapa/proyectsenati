@@ -15,6 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: Opacity 1s ease;
 }
 
 /* !SECCION DE OFERTAS */
@@ -25,10 +26,10 @@
   height: 20rem;
   position: relative;
   overflow: hidden;
-
   /* *FLEX */
   display: flex;
   align-items: center;
+  animation: MoveLeft 2s ease;
   & cardoferta-component {
     width: 100%;
     transition: all 0.5s ease;
@@ -51,11 +52,16 @@
     color: var(--color-secondary);
     font-size: var(--title-home);
     margin: 0;
+    animation: MoveTop 1s ease;
   }
   & p {
     max-width: 24rem;
     font-size: var(--text);
     color: var(--color-secondary);
+    animation: MoveTop 2s ease;
+  }
+  & a {
+    animation: MoveTop 2s ease;
   }
 }
 /* !FLECHAS DE IZQUIERDA Y DERECHA */
@@ -126,6 +132,7 @@
   & h2 {
     margin: 1rem 0;
     font-size: var(--title);
+    animation: MoveTop 2s ease;
   }
   & p {
     max-width: 50rem;
@@ -133,12 +140,14 @@
     font-size: var(--text);
     line-height: 2rem;
     padding: 1rem;
+    animation: MoveTop 1s ease;
   }
   & svg {
     max-width: 60rem;
     width: 100%;
     padding: 0 3rem;
     min-width: 10rem;
+    animation: MoveTop 1s ease;
   }
 }
 
@@ -186,9 +195,11 @@
     max-width: 40rem;
     font-size: var(--title);
     margin: 1rem 0;
+    animation: MoveTop 1s ease;
   }
   & p {
     font-size: var(--text);
     font-weight: normal;
+    animation: MoveTop 1s ease;
   }
 }

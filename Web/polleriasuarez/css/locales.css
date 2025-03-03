@@ -21,9 +21,11 @@
   & h1 {
     margin: 0;
     font-size: var(--title-home);
+    animation: MoveTop 1s ease;
   }
   & p {
     font-size: var(--text);
+    animation: MoveTop 1s ease;
   }
 }
 

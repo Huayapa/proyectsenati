@@ -67,11 +67,31 @@ body::-webkit-scrollbar-thumb  {
 }
 
 /*! ANIMACIONES */
-@keyframes fadeIn {
+@keyframes Opacity {
   from {
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+@keyframes MoveTop {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes MoveLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -97,6 +117,7 @@ body::-webkit-scrollbar-thumb  {
   font-size: var(--text-btn);
   text-decoration: none;
   transition: all 0.5s ease;
+  animation: MoveTop 1s ease;
   &:hover {
     background-color: var(--color-tertiary-hover);
   }
@@ -114,6 +135,7 @@ body::-webkit-scrollbar-thumb  {
     font-size: var(--sub-title);
     border-bottom: 4px solid var(--color-primary-line);
     text-align: center;
+    animation: MoveTop 1s ease;
   }
 }
 
@@ -129,6 +151,7 @@ body::-webkit-scrollbar-thumb  {
     font-size: var(--sub-title);
     border-bottom: 4px solid var(--color-primary-line);
     text-align: start;
+    animation: MoveTop 1s ease;
   }
 }
 

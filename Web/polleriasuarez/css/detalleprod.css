@@ -11,7 +11,7 @@
   max-width: 70rem;
   width: 100%;
   height: 30rem;
-
+  animation: MoveTop 1s ease;
   /* *flex */
   display: flex;
   justify-content: space-between;

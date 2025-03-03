@@ -9,6 +9,7 @@
   position: fixed;
   top: 0;
   z-index: 999;
+  animation: OpacityMenu 0.5s ease;
   & .header__left {
     display: flex;
     align-items: center;
@@ -19,6 +20,7 @@
     }
     & nav {
       display: flex;
+      animation: MoveTop 1s ease;
       & a {
         display: block;
         padding: 1rem;
@@ -198,5 +200,35 @@
   to {
     opacity: 0;
     transform: translateY(-120%);
+  }
+}
+@keyframes OpacityMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes MoveLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes MoveTop {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

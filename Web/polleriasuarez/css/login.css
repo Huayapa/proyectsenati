@@ -17,6 +17,7 @@
   justify-content: space-between;
   border: 2px solid var(--color-border-card);
   border-radius: 1rem;
+  animation: MoveTop 1s ease;
   & img {
     max-width: 35rem;
     width: 100%;
@@ -43,6 +44,7 @@
         border-bottom: 3px solid var(--color-primary);
         font-size: var(--sub-title);
         color: var(--color-primary);
+        animation: MoveTop 1s ease;
       }
       & p {
         color: var(--color-primary);
@@ -67,6 +69,7 @@
         max-width: 10rem;
         width: 100%;
         border-radius: 5px;
+        animation: MoveTop 1s ease;
       }
     }
   }
