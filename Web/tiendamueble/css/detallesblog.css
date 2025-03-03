@@ -12,6 +12,7 @@
   border: 1px solid var(--border-color-card);
   display: flex;
   justify-content: space-between;
+  animation: MoveTop 1s ease;
   & img {
     max-width: 23rem;
     width: 100%;

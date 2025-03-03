@@ -48,12 +48,13 @@
   & h1 {
     font-size: var(--title-xl);
     margin: 0;
+    animation: MoveTop 1s ease;
   }
   & p {
     max-width: 40rem;
     width: 100%;
     font-size: var(--text-xl);
-    
+    animation: MoveTop 2s ease;
   }
   & .btn {
     cursor: pointer;
@@ -64,6 +65,7 @@
     background-color: var(--color-primary);
     color: var(--color-secondary);
     transition: all 0.6s ease;
+    animation: MoveTop 1s ease;
     &:hover {
       scale: 1.1;
     }
@@ -119,5 +121,6 @@
     word-break: break-all;
   }
 }
+
 
 

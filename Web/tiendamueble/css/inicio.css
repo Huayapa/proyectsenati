@@ -26,10 +26,12 @@ SECCION DE INICIO "HOME"
       font-size: var(--title-home);
       font-weight: normal;
       margin: 0;
+      animation: MoveTop 1s ease;
     }
     & h2 {
       font-size: var(--subtitle-home);
       margin: 0;
+      animation: MoveTop 2s ease;
     }
   }
   & .section_btn {
@@ -47,6 +49,7 @@ SECCION DE INICIO "HOME"
       border: 0;
       border-radius: 0.7rem;
       transition: all 0.5s ease;
+      animation: MoveTop 2s ease;
       &:hover {
         scale: 1.1;
       }
@@ -97,6 +100,7 @@ SECCION DE PRODUCTOS DESTACADOS
     font-weight: bold;
     margin: 0;
     padding: 1rem 0;
+    animation: MoveTop 1s ease;
   }
 }
 .list_prods {
@@ -131,6 +135,7 @@ SECCION DE UBICACION
       color: var(--color-tertiary);
       margin: 0;
       vertical-align: baseline;
+      animation: MoveTop 1s ease;
     }
     & p {
       line-height: 1.4rem;
@@ -140,6 +145,7 @@ SECCION DE UBICACION
       text-overflow: ellipsis;
       height: 14rem;
       width: 100%;
+      animation: MoveTop 2s ease;
     }
     & button {
       cursor: pointer;
@@ -162,6 +168,7 @@ SECCION DE UBICACION
     padding-left: 1rem;
     object-fit: cover;
     filter: brightness(80%);
+    animation: Opacity 1s ease;
   }
 }
 @media screen and (max-width: 800px) {
@@ -197,6 +204,7 @@ SECCION DE UBICACION
     font-weight: bold;
     margin: 0;
     padding: 1rem 0;
+    animation: MoveTop 1s ease;
   }
 }
 

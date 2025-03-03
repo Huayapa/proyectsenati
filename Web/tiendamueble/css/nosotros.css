@@ -46,6 +46,7 @@ body {
     text-transform: uppercase;
     color: var(--color-secondary);
     font-size: var(--title);
+    animation: MoveTop 1s ease;
 }
 
 #Portada p {
@@ -53,6 +54,7 @@ body {
     line-height: 1.2;
     color: var(--color-secondary);
     font-size: var(--text);
+    animation: MoveTop 2s ease;
 }
 #Nosotros {
     padding: 20px;
@@ -64,6 +66,7 @@ body {
     align-items: center;
     width: 100%;
     padding: 20px;
+    animation: MoveTop 1s ease;
 }
 
 #contenido h2, #contenido2 h2 {

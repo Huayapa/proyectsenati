@@ -8,6 +8,7 @@
   z-index: 999;
   & .header_logo object {
     width: 100%;
+    animation: MoveTop 1s ease;
   }
   & .header_nav {
     background-color: var(--color-primary-header);
@@ -15,6 +16,7 @@
     justify-content: end;
     border-end-start-radius: 2rem;
     padding: 0 0 0 1rem;
+    animation: MoveRight 1s ease;
     & nav {
       display: flex;
       justify-content: end;
@@ -117,5 +119,27 @@
   to {
     opacity: 0;
     transform: translateX(120%);
+  }
+}
+
+@keyframes MoveRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes MoveTop {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

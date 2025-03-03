@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: MoveTop 2s ease;
   & .map_info {
     max-width: 24rem;
     padding: 0.5rem 1rem;
@@ -69,5 +70,16 @@
     & .map_btn button {
       width: 100%;
     }
+  }
+}
+
+@keyframes MoveTop {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

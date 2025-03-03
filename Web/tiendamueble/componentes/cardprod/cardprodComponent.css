@@ -6,6 +6,7 @@
   position: relative;
   transition: all 0.5s ease;
   aspect-ratio: 10 / 2;
+  animation: Opacity 1s ease;
   & img {
     width: 100%;
     /* height: inherit; */
@@ -61,5 +62,15 @@
   &:hover {
     scale: 1.05;
     filter: brightness(80%);
+  }
+}
+
+
+@keyframes Opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
