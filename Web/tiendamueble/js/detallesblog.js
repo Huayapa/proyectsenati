@@ -1,3 +1,5 @@
+import { returnbtn } from "./functions/returnBtn.js";
+
 document.addEventListener("DOMContentLoaded", e => {
 // Obtiene el valor de los parámetros
 let params = new URLSearchParams(window.location.search);
@@ -29,10 +31,4 @@ fetch(`api/blogs.json`)
     returnbtn();
   })
 
-  function returnbtn() {
-    const $returnbtn = document.getElementById("btn_regresar");
-    $returnbtn.addEventListener("click", e => {
-      window.location.href = "index.html";
-    })
-  }
 });

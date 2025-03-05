@@ -1,3 +1,5 @@
+import { addContador } from "./functions/counter.js";
+
 document.addEventListener("DOMContentLoaded", e => {
 // Obtiene el valor de los parámetros
 let params = new URLSearchParams(window.location.search);
@@ -39,22 +41,5 @@ fetch(`https://furniture-api.fly.dev/v1/products?name=${name}`)
     addContador(stock);
   })
 
-  // Funcion para agregar el contador
-  function addContador(stock) {
-    const $mas = document.getElementById("mas");
-    const $menos = document.getElementById("menos");
-    const $cantidad = document.querySelector(".cantidad");
-    $mas.addEventListener("click", () => {
-      const cantidad_num = Number($cantidad.textContent);
-      if(cantidad_num < stock) {
-        $cantidad.textContent = cantidad_num + 1;
-      }
-    })
-    $menos.addEventListener("click", () => {
-      const cantidad_num = Number($cantidad.textContent);
-      if(cantidad_num > 0) {
-        $cantidad.textContent = cantidad_num - 1;
-      }
-    })
-  }
+  
 });
